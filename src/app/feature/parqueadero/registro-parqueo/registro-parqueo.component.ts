@@ -1,11 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {PostParqueaderoService} from '../servicios/post-parqueadero.service';
+
 @Component({
-  selector: 'app-formulario-registro-parqueo',
-  templateUrl: './formulario-registro-parqueo.component.html',
-  styleUrls: ['./formulario-registro-parqueo.component.css']
+  selector: 'app-registro-parqueo',
+  templateUrl: './registro-parqueo.component.html',
+  styleUrls: ['./registro-parqueo.component.css']
 })
-export class FormularioRegistroParqueoComponent implements OnInit {
+export class RegistroParqueoComponent implements OnInit {
+
   public placa : string="";
   public tipovehiculo : string='Selecciona el vehiculo';
   public cilindraje : string="";
@@ -42,5 +44,4 @@ export class FormularioRegistroParqueoComponent implements OnInit {
   this.marca='';
   this.modelo='';
   }
-
 }
