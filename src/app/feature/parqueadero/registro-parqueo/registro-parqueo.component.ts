@@ -9,7 +9,7 @@ import {PostParqueaderoService} from '../servicios/post-parqueadero.service';
 export class RegistroParqueoComponent implements OnInit {
 
   public placa : string="";
-  public tipovehiculo : string='Selecciona el vehiculo';
+  public tipovehiculo : string='seleccion';
   public cilindraje : string="";
   public marca : string="";
   public modelo : string="";
@@ -21,7 +21,7 @@ export class RegistroParqueoComponent implements OnInit {
 
   registrarParqueo(){
 
-    this.placa = '';
+    // this.placa = '';
     // console.log(this.placa);
     let body = 	{
       "placa" :this.placa,
