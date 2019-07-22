@@ -29,7 +29,7 @@ export class RegistroParqueoComponent implements OnInit {
       this.tipovehiculo= 'seleccion';
 
       Swal.fire({
-        type: 'error',
+        type: 'warning',
         title: 'Oops...',
         text: 'Debes seleccionar el tipo de vehiculo!',
 
@@ -41,7 +41,7 @@ export class RegistroParqueoComponent implements OnInit {
     } else if (this.placa.trim().length == 0) {
 
       Swal.fire({
-        type: 'error',
+        type: 'warning',
         title: 'Oops...',
         text: 'Debes ingresar la placa!',
 
@@ -52,7 +52,7 @@ export class RegistroParqueoComponent implements OnInit {
     } else if (this.cilindraje.trim().length == 0) {
 
       Swal.fire({
-        type: 'error',
+        type: 'warning',
         title: 'Oops...',
         text: 'Debes ingresar el cilindraje!',
 
@@ -62,7 +62,7 @@ export class RegistroParqueoComponent implements OnInit {
 
     } else if (this.marca.trim().length == 0) {
       Swal.fire({
-        type: 'error',
+        type: 'warning',
         title: 'Oops...',
         text: 'Debes ingresar la marca!',
 
@@ -72,7 +72,7 @@ export class RegistroParqueoComponent implements OnInit {
 
     } else if (this.modelo.trim().length == 0) {
       Swal.fire({
-        type: 'error',
+        type: 'warning',
         title: 'Oops...',
         text: 'Debes ingresarel modelo!',
 
