@@ -61,12 +61,7 @@ export class ListaParqueoComponent implements OnInit {
             
           });
         }
-    if (response.ERROR) {
-      console.log("paso"+response.ERROR);
-    }
-        // response.forEach((item) => {
-        //   console.log(item);
-        // })
+
       }, error => {
         Swal.fire({
           type: 'error',

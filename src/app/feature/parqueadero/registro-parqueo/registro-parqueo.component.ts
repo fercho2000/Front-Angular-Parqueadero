@@ -99,7 +99,8 @@ export class RegistroParqueoComponent implements OnInit {
           'success'
         )
       }
-
+      this.tipovehiculo= 'seleccion';
+      
     }, error => {
       Swal.fire({
         type: 'error',
