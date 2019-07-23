@@ -5,11 +5,15 @@ export class AppPage {
     return browser.get(browser.baseUrl + `/${path}`) as Promise<any>;
   }
 
-  setInputTipoVehiculo(){
+  setInputTipoVehiculoMoto(){
     element(by.tagName("select#TipoVehiculo")).click();
     element(by.css("#TipoVehiculo [value='moto']")).click();
   }
 
+  setInputTipoVehiculoAuto(){
+    element(by.tagName("select#TipoVehiculo")).click();
+    element(by.css("#TipoVehiculo [value='auto']")).click();
+  }
 
   setInputPlaca(placa: string) {
     return element(by.id('placa')).sendKeys(placa);
@@ -30,7 +34,7 @@ export class AppPage {
   clickRegistrarVehiculo(){
     return element(by.buttonText("Registrar")).click();
   }
-  
+
   obtenerMensajeRegistro(){
 
     return element(by.id("swal2-content")).getText() as Promise<string>;
