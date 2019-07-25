@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Subject }    from 'rxjs';
 import { tap } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostParqueaderoService {
-private URLGUARDAR : string="http://localhost:8080/registrarHistorial";
+private URLGUARDAR : string= environment.urlpostvehiculos;
 
   // Observable string sources
   private listaCambioSource = new Subject<string>();

@@ -22,7 +22,7 @@ describe('workspace-project App', () => {
     page.setInputModelo(modelo);
     page.clickRegistrarVehiculo().then(
       ()=>{
-        expect(page.obtenerMensajeRegistro()).toEqual(`Registro éxitoso`);
+        expect(page.obtenerMensajes()).toEqual(`Registro éxitoso`);
       }
     );
 
@@ -41,7 +41,83 @@ describe('workspace-project App', () => {
     page.setInputModelo(modelo);
     page.clickRegistrarVehiculo().then(
       ()=>{
-        expect(page.obtenerMensajeRegistro()).toEqual(`Registro éxitoso`);
+        expect(page.obtenerMensajes()).toEqual(`Registro éxitoso`);
+      }
+    );
+
+  });
+
+  it('Validar seleccion del tipo de vehiculo', () => {
+
+    page.navigateTo('vehiculos');
+    
+    page.clickRegistrarVehiculo().then(
+      ()=>{
+        expect(page.obtenerMensajes()).toEqual(`Debes seleccionar el tipo de vehiculo!`);
+      }
+    );
+
+  });
+
+  it('Validar ingreso de la placa', () => {
+    const placa="";
+    page.navigateTo('vehiculos');
+    page.setInputTipoVehiculoMoto();
+    page.setInputPlaca(placa);
+    page.clickRegistrarVehiculo().then(
+      ()=>{
+        expect(page.obtenerMensajes()).toEqual(`Debes ingresar la placa!`);
+      }
+    );
+
+  });
+
+  it('Validar el cilindraje', () => {
+    const placa = generarPlacaParaCarro();
+    const cilindraje = "";
+    page.navigateTo('vehiculos');
+    page.setInputTipoVehiculoAuto();
+    page.setInputPlaca(placa);
+    page.setInputCilindraje(cilindraje);
+    page.clickRegistrarVehiculo().then(
+      ()=>{
+        expect(page.obtenerMensajes()).toEqual(`Debes ingresar el cilindraje!`);
+      }
+    );
+
+  });
+
+  it('Validar la marca', () => {
+    const placa = generarPlacaParaCarro();
+    const cilindraje = "810";
+    const marca ="";
+    page.navigateTo('vehiculos');
+    page.setInputTipoVehiculoAuto();
+    page.setInputPlaca(placa);
+    page.setInputCilindraje(cilindraje);
+    page.setInputMarca(marca);
+    page.clickRegistrarVehiculo().then(
+      ()=>{
+        expect(page.obtenerMensajes()).toEqual(`Debes ingresar la marca!`);
+      }
+    );
+
+  });
+
+  it('Validar el modelo', () => {
+    const placa = generarPlacaParaCarro();
+    const cilindraje = "810";
+    const marca ="chevrolet";
+    const modelo="";
+    page.navigateTo('vehiculos');
+    page.setInputTipoVehiculoAuto();
+    page.setInputPlaca(placa);
+    page.setInputCilindraje(cilindraje);
+    page.setInputMarca(marca);
+    page.setInputModelo(modelo);
+    page.clickRegistrarVehiculo().then(
+      ()=>{
+        expect(page.obtenerMensajes()).toEqual(`Debes ingresarel modelo!`);
       }
     );
 

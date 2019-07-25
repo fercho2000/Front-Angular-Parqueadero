@@ -31,13 +31,16 @@ export class AppPage {
     return element(by.id('modelo')).sendKeys(modelo);
   }
 
+
+
   clickRegistrarVehiculo(){
     return element(by.buttonText("Registrar")).click();
   }
 
-  obtenerMensajeRegistro(){
+  obtenerMensajes(){
 
     return element(by.id("swal2-content")).getText() as Promise<string>;
   }
+
 
 }
