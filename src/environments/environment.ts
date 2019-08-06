@@ -7,6 +7,11 @@ export const environment = {
   urlgetvehiculos: 'http://localhost:8080/obtenervehiculos',
   urlpostvehiculos : 'http://localhost:8080/registrarHistorial',
   urlputretirovehiculo : 'http://localhost:8080/retirar/'
+
+  // Ejemplo para probar front con back desde un cel
+  // urlgetvehiculos: 'http:/ip del servidor/obtenervehiculos',
+  // urlpostvehiculos : 'http:/ip del servidor/registrarHistorial',
+  // urlputretirovehiculo : 'http:/ip del servidor/retirar/'
   
 };
 

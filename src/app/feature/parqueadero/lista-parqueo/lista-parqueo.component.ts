@@ -35,6 +35,7 @@ export class ListaParqueoComponent implements OnInit {
 
   listarVehiculosParqueados(){
     this.servicioGet.listarVehiculosParqueados().subscribe((vehiculosEnParqueo) => {
+   
       this.listaParqueados = vehiculosEnParqueo;  
       // response.forEach((item) => {
       //   console.log(item);

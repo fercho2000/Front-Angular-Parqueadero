@@ -6,7 +6,8 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ListaParqueadosService {
-private URLOBTENE: string= environment.urlgetvehiculos;
+  
+  private URLOBTENE: string= environment.urlgetvehiculos;
   constructor(private http: HttpClient) { }
 
   listarVehiculosParqueados(): any{
