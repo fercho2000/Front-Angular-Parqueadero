@@ -20,14 +20,14 @@
         <tr *ngFor="let item of listaParqueados; let i=index; " id="parqueados">
 
             <th scope="row ">{{i+1}}</th>
-            <th>{{item.fechaIngreso}}</th>
-            <td>{{item.vehiculo.tipoVehiculo | titlecase}}</td>
-            <td>{{item.vehiculo.placa}}</td>
-            <td>{{item.vehiculo.marca}}</td>
-            <td>{{item.vehiculo.modelo}}</td>
-            <td>{{item.fechaSalida==null?'Parqueado':item.fechaSalida}}</td>
-            <td>{{item.pago!=0.0?item.pago:'no pago'}}</td>
-            <td><button [disabled]="item.fechaSalida!=null " (click)="salidaVehiculo(item.vehiculo.placa) " class="btn btn-primary ">Salida</button></td>
+            <th>{{item.fechaIngreso | date :'medium'}}</th>
+            <th>{{item.vehiculo.tipoVehiculo | titlecase}}</th>
+            <th>{{item.vehiculo.placa | uppercase}}</th>
+            <th>{{item.vehiculo.marca | titlecase}}</th>
+            <th>{{item.vehiculo.modelo}}</th>
+            <th>{{item.fechaSalida==null?'Parqueado':item.fechaSalida | date :'medium'}}</th>
+            <th>{{item.pago!=0.0?"$"+item.pago:'No Pago'}}</th>
+            <th><button [disabled]="item.fechaSalida!=null " (click)="salidaVehiculo(item.vehiculo.placa) " class="btn btn-primary ">Salida</button></th>
 
         </tr>
     </tbody>
