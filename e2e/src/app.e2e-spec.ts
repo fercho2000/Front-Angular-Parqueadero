@@ -9,7 +9,7 @@ describe('workspace-project App', () => {
   });
 
 
-  it('Ingresar Vehiculo moto', () => {
+  it('Ingresar Vehiculo Moto', () => {
     const placa = generarPlacaParaMoto();
     const cilindraje = "510";
     const marca = "Dr650";
@@ -28,7 +28,7 @@ describe('workspace-project App', () => {
 
   });
 
-  it('Ingresar Vehiculo auto', () => {
+  it('Ingresar Vehiculo Auto', () => {
     const placa = generarPlacaParaCarro();
     const cilindraje = "810";
     const marca = "Chevrolet";

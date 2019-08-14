@@ -7,12 +7,12 @@ export class AppPage {
 
   setInputTipoVehiculoMoto(){
     element(by.tagName("select#TipoVehiculo")).click();
-    element(by.css("#TipoVehiculo [value='moto']")).click();
+    element(by.css("#TipoVehiculo [value='MOTO']")).click();
   }
 
   setInputTipoVehiculoAuto(){
     element(by.tagName("select#TipoVehiculo")).click();
-    element(by.css("#TipoVehiculo [value='auto']")).click();
+    element(by.css("#TipoVehiculo [value='AUTO']")).click();
   }
 
   setInputPlaca(placa: string) {
